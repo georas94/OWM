@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Meteo Rashid</title>
+    <style>
+    .temperatureClasse{
+        font-size:4.8em;
+        color:red;
+    }
+    .temperatureClasse:after{
+        content: " °";
+    }
+    .vitesseVentClasse{
+         font-size:4.8em;
+        color:green;
+    }
+    .vitesseVentClasse:after{
+        content: " km/h";
+    }
+    .arrow{
+        transition: ease 1s;
+    }
+    </style>
+</head>
+<body>
+    
+<h1 class="d-flex justify-content-center mt-5">Tableau de bord météo</h1>
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-center">
+
+        <div class="col-4">
+         <button class="btn btn-secondary " name="listeVille" id="listeVille">Récupérer la liste des villes</button>
+        </div>
+
+        <div class="input-group col-4">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Villes</span>
+            </div>
+            <select class="custom-select" id="listeDeroulante">
+               
+            </select>
+        </div>
+
+    </div>
+
+    <div class="container mt-5 border rounded bg-light p-2" id="tableau">
+
+        <div class="d-flex justify-content-center">
+            <div class="col-4">
+                <h1 class="text-center">Température</h1>
+                <H1 class="display-3 text-center temperatureClasse" id="temperature"></H1>
+            </div>  
+
+            <div class="col-4">
+                <h1 class="text-center">Vitesse du vent</h1>
+                <H1 class="display-3 text-center vitesseVentClasse" id="vitesseVent"></H1>
+            </div>  
+
+            <div class="col-4">
+                <h1 class="text-center">Direction du vent</h1>
+                <div class="d-flex justify-content-center ">
+                     <img src="arrow.png" alt="" id="fleche" class="img-fluid arrow w-50 h-50">
+                </div>
+            </div>  
+        </div>
+    </div>
+
+
+
+</div>
+ 
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
